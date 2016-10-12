@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block header %}
+Place
+{%  endblock %}
+{% block content %}
+
+<div class="col-sm-10">
+   <h1>{{ place.name}}</h1>
+    <div class="well">
+        {{ place.description}}
+    </div>
+
+</div>
+{% endblock %}

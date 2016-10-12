@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>Home page</h1>
+{% endblock %}
+
+
+
+{% block content %}
+
+<h1>Hello</h1>
+<div class="col-sm-10">
+    {% for i in places %}
+
+       <div class="well"><a href="{{ i.get_absolute_url }}">{{ i.name }}</a></div>
+    {% endfor %}
+
+    {% for item in items %}
+    <tr>
+        <td>{{ forloop.counter }}: {{ item.text }}</td>
+    </tr>
+    {% endfor %}
+
+</div>
+{% endblock %}
+
+
+{% block footer %}
+<div>   <h1>This is footer</h1></div>
+{% endblock %}

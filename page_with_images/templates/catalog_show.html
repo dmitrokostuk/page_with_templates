@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+    {% block header %}
+        Home page
+    {% endblock %}
+
+    {% block content %}
+
+
+        {% block bredcrumbs %} / My catalog {{ catalog.name }} {% endblock %}
+
+    {% for i in items %}
+
+    <div class="well"><a href="">{{ i.text }}</a></div>
+    {% endfor %}
+    <ul class="nav nav-pills nav-stacked">
+    {% for i in place %}
+        <li><a href="{{ i.get_absolute_url }}">{{ i.name }}</a></li>
+    {% endfor %}
+
+    </ul>
+    {% endblock %}
+
+    {% block footer %}
+
+    {% endblock %}
